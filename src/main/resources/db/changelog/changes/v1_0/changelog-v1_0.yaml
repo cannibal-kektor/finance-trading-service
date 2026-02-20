@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: v1_0-01-schema
+      author: kektor
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: true
+            path: 01_schema.sql
+
+  - changeSet:
+      id: v1_0-02-users
+      author: kektor
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: true
+            path: 02_users.sql
+
+  - changeSet:
+      id: v1_0-03-user-subscription
+      author: kektor
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: true
+            path: 03_user_subscription.sql
+
+  - changeSet:
+      id: v1_0-04-trade-quote
+      author: kektor
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: true
+            path: 04_trade_quote.sql
+
+  - changeSet:
+      id: v1_0-05-refresh-tokens
+      author: kektor
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: true
+            path: 05_refresh_tokens.sql
