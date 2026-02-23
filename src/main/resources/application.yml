@@ -1,5 +1,18 @@
+finnhub:
+  base-url: ${FINNHUB_URL:https://finnhub.io/api/v1}
+  token: ${FINNHUB_TOKEN}
+
 spring:
   application.name: finance-trading
+
+  cloud.openfeign:
+    client:
+      config:
+        default:
+          connect-timeout: 3000
+          read-timeout: 10000
+          loggerLevel: basic
+          dismiss404: true
 
   datasource:
     url: ${FINANCE_DB_URL}
@@ -39,3 +52,6 @@ management:
           include: livenessState
         readiness:
           include: readinessState, diskSpace, db
+server:
+  port: 8080
+  address: 0.0.0.0

@@ -11,6 +11,7 @@ services:
       postgres-finance:
         condition: service_healthy
     environment:
+      - FINNHUB_TOKEN=${FINNHUB_TOKEN}
       - FINANCE_DB_URL=${FINANCE_DB_URL}
       - FINANCE_DB_USER=${FINANCE_DB_USER}
       - FINANCE_DB_PASSWORD=${FINANCE_DB_PASSWORD}

@@ -1,10 +1,13 @@
 package kektor.innowise.trading.dto.trade;
 
+import lombok.Builder;
+
 import java.util.List;
 
-public record CompaniesResponse(
+@Builder
+public record CompaniesInfoResponse(
         String exchange,
         int count,
-        List<CompanyResponse> items
+        List<CompanyInfoResponse> items
 ) {
 }
