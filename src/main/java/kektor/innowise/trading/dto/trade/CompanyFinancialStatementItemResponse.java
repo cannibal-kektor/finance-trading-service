@@ -2,7 +2,7 @@ package kektor.innowise.trading.dto.trade;
 
 import java.math.BigDecimal;
 
-public record FinancialStatementItemResponse(
+public record CompanyFinancialStatementItemResponse(
         String concept,
         String label,
         String unit,
